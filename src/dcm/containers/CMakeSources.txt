@@ -1,0 +1,24 @@
+cmake_minimum_required( VERSION 2.8.3 )
+
+project ( DCM_CONTAINERS )
+
+#set the directory for these object
+set( DCM_CONTAINERS_DIR ${DCM_CORE_DIR}/containers )
+
+# Include the API directory for grabing the headers correctly
+include_directories ( ${BOOST_INCLUDE_DIR};
+                      ${DCM_CONTAINERS_SOURCE_DIR};
+                      ${DCM_API_DIR};
+                      ${DCM_CORE_DIR}/base;
+                      ${DCM_CORE_DIR}/keys;
+                      ${DCM_CORE_DIR}/values;
+                    )
+
+# Source files
+set ( DCM_CONTAINERS_SOURCES 
+        ${DCM_CONTAINERS_DIR}/CDCMHashMapContainer.cpp;
+        ${DCM_CONTAINERS_DIR}/CDCMMapContainer.cpp;
+        ${DCM_CONTAINERS_DIR}/CDCMMultiTableContainer.cpp;
+        ${DCM_CONTAINERS_DIR}/IDCMContainer.cpp;
+    )
+

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:attribute name="numItems" type="xs:string"/>
+
+    <xs:element name="test-data">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="insert" type="insertType"/>
+                <xs:element name="find" type="findType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="insertType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
+            <xs:choice minOccurs="1" maxOccurs="1">
+                <xs:element name="TeidIpAddressKey" type="TeidIpAddressKeyType"/>
+                <xs:element name="ImsiKey" type="ImsiKeyType"/>
+            </xs:choice>
+            <xs:choice minOccurs="1" maxOccurs="1">
+                <xs:element name="SessionInfoValue" type="SessionInfoValueType"/>
+                <xs:element name="SubscriberInfoValue" type="SubscriberInfoValueType"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute ref="numItems" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="findType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
+            <xs:choice minOccurs="1" maxOccurs="1">
+                <xs:element name="TeidIpAddressKey" type="TeidIpAddressKeyType"/>
+                <xs:element name="ImsiKey" type="ImsiKeyType"/>
+            </xs:choice>
+            <xs:choice minOccurs="1" maxOccurs="1">
+                <xs:element name="EnrichmentInfoValue" type="EnrichmentInfoValueType"/>
+                <xs:element name="SessionInfoValue" type="SessionInfoValueType"/>
+                <xs:element name="SubscriberInfoValue" type="SubscriberInfoValueType"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute ref="numItems" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="TeidIpAddressKeyType">
+        <xs:all minOccurs="1" maxOccurs="1">
+            <xs:element name="teid-start-value" type="xs:string"/>
+            <xs:element name="ip-start-value" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    
+    <xs:complexType name="ImsiKeyType">
+        <xs:all minOccurs="1" maxOccurs="1">
+            <xs:element name="imsi-start-value" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    
+    <xs:complexType name="EnrichmentInfoValueType">
+        <xs:all minOccurs="1" maxOccurs="1">
+            <xs:element name="imsi-start-value" type="xs:string"/>
+            <xs:element name="imei-start-value" type="xs:string"/>
+            <xs:element name="msisdn-start-value" type="xs:string"/>
+            <xs:element name="cgi-start-value" type="xs:string"/>
+            <xs:element name="qci-start-value" type="xs:string"/>
+            <xs:element name="apn-start-value" type="xs:string"/>
+            <xs:element name="time-start-value" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    
+    <xs:complexType name="SessionInfoValueType">
+        <xs:all minOccurs="1" maxOccurs="1">
+            <xs:element name="imsi-start-value" type="xs:string"/>
+            <xs:element name="qci-start-value" type="xs:string"/>
+            <xs:element name="apn-start-value" type="xs:string"/>
+            <xs:element name="time-start-value" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    
+    <xs:complexType name="SubscriberInfoValueType">
+        <xs:all minOccurs="1" maxOccurs="1">
+            <xs:element name="imei-start-value" type="xs:string"/>
+            <xs:element name="msisdn-start-value" type="xs:string"/>
+            <xs:element name="cgi-start-value" type="xs:string"/>
+            <xs:element name="time-start-value" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+</xs:schema>

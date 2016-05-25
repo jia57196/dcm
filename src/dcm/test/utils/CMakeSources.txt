@@ -1,0 +1,25 @@
+cmake_minimum_required( VERSION 2.6 )
+
+project ( DCM_TEST_UTILS )
+
+#Make sure the source directory points at the correct location
+set( DCM_BASE_DIR ${DCM_CORE_DIR}/base )
+
+include_directories ( ${DCM_CORE_BASE_DIR};
+                      ${DCM_CORE_CONTAINERS_DIR};
+                      ${DCM_CORE_CONFIG_DIR};
+                      ${API_CORE_DIR};
+                      ${DCMKEY_BASE_DIR};
+                      ${DCMKEY_C_BINDING_DIR};
+                      ${BOOST_INCLUDE_DIR};
+                    )
+
+# Source files
+set ( DCM_TEST_UTILS_SOURCES 
+        ${DCM_TEST_UTILS_DIR}/CDCMTestUtil.cpp
+    )
+
+set ( DCM_TEST_CBINDING_SOURCES 
+        ${DCM_TEST_UTILS_DIR}/CDCMTestCBinding.cpp
+    )
+

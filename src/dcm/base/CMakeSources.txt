@@ -1,0 +1,21 @@
+cmake_minimum_required( VERSION 2.8.3 )
+
+project ( DCM_BASE )
+
+#Make sure the source directory points at the correct location
+set( DCM_BASE_DIR ${DCM_CORE_DIR}/base )
+
+include_directories ( ${DCM_BASE_SOURCE_DIR}
+                      ${DCM_CORE_DIR}/containers
+                      ${DCM_CORE_DIR}/config
+                      ${BOOST_INCLUDE_DIR};
+                      ${API_CORE_DIR} )
+
+# Source files
+set ( DCM_BASE_SOURCES 
+        ${DCM_BASE_DIR}/CBitmask.cpp;
+        ${DCM_BASE_DIR}/CDCM.cpp 
+        ${DCM_BASE_DIR}/Common.cpp 
+    )
+
+

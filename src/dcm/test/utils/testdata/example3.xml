@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<test-data>
+
+    <insert numItems="100">
+        <ImsiKey>
+            <imsi-start-value>111111111</imsi-start-value>
+        </ImsiKey>
+        
+        <SessionInfoValue>
+            <imsi-start-value>100000000000</imsi-start-value>
+            <qci-start-value>1</qci-start-value>
+            <apn-start-value>10</apn-start-value>
+            <time-start-value>1</time-start-value>
+        </SessionInfoValue>
+    </insert>
+
+    <find numItems="100">
+        <ImsiKey>
+            <imsi-start-value>111111111</imsi-start-value>
+        </ImsiKey>
+        
+        <SessionInfoValue>
+            <imsi-start-value>100000000000</imsi-start-value>
+            <qci-start-value>1</qci-start-value>
+            <apn-start-value>10</apn-start-value>
+            <time-start-value>1</time-start-value>
+        </SessionInfoValue>
+    </find>
+
+</test-data>

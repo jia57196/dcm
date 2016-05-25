@@ -1,0 +1,49 @@
+{
+   DCM Container Leak
+   Memcheck:Leak
+   fun:_Znwm
+   fun:_ZN16maa_dcmtestutils12CDCMTestUtil7initDCMESsSsSs
+   fun:main
+}
+{
+   Xerces 2.7 Leak
+   Memcheck:Leak
+   fun:_Znwm
+   fun:_ZN22CSimpleDocumentHandler23convertTagElementToNodeER17CSimpleTagElement
+   fun:_ZN22CSimpleDocumentHandler10endElementEPKt
+   fun:_ZN11xercesc_2_79SAXParser10endElementERKNS_14XMLElementDeclEjbPKt
+   fun:_ZN11xercesc_2_712IGXMLScanner10scanEndTagERb
+   fun:_ZN11xercesc_2_712IGXMLScanner11scanContentEv
+   fun:_ZN11xercesc_2_712IGXMLScanner12scanDocumentERKNS_11InputSourceE
+   fun:_ZN11xercesc_2_710XMLScanner12scanDocumentEPKt
+   fun:_ZN11xercesc_2_710XMLScanner12scanDocumentEPKc
+   fun:_ZN11xercesc_2_79SAXParser5parseEPKc
+   fun:_ZN17CXmlParserFactory10parseToSaxEPN11xercesc_2_715DocumentHandlerEP23IXmlParserErrorReporterPKcS6_S6_
+   fun:_ZN17CXmlParserFactory27parseToSimpleRepresentationERP8IXmlNodeP23IXmlParserErrorReporterPKcS6_S6_
+}
+{
+   DCM Value Leak
+   Memcheck:Leak
+   fun:_Znwm
+   fun:_ZN16maa_dcmtestutils12CDCMTestUtil16extractKeyValuesEP8IXmlNodemRPPN4NDCM7IDCMKeyERPPNS3_9IDCMValueESA_
+   fun:_ZN16maa_dcmtestutils12CDCMTestUtil12readTestDataESs
+   fun:main
+}
+{
+   DCM Sub Value Leak
+   Memcheck:Leak
+   fun:_Znwm
+   fun:_ZN16maa_dcmtestutils12CDCMTestUtil26extractSubscriberInfoValueEP8IXmlNodemRPPN4NDCM9IDCMValueE
+   fun:_ZN16maa_dcmtestutils12CDCMTestUtil16extractKeyValuesEP8IXmlNodemRPPN4NDCM7IDCMKeyERPPNS3_9IDCMValueESA_
+   fun:_ZN16maa_dcmtestutils12CDCMTestUtil12readTestDataESs
+   fun:main
+}
+{
+   DCM Session Value Leak
+   Memcheck:Leak
+   fun:_Znwm
+   fun:_ZN16maa_dcmtestutils12CDCMTestUtil23extractSessionInfoValueEP8IXmlNodemRPPN4NDCM9IDCMValueE
+   fun:_ZN16maa_dcmtestutils12CDCMTestUtil16extractKeyValuesEP8IXmlNodemRPPN4NDCM7IDCMKeyERPPNS3_9IDCMValueESA_
+   fun:_ZN16maa_dcmtestutils12CDCMTestUtil12readTestDataESs
+   fun:main
+}

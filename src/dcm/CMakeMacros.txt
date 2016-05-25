@@ -1,0 +1,13 @@
+#API level build file. 
+cmake_minimum_required(VERSION 2.8.3 )
+
+#Macro reads in an original source_dir a source_list to append to and the
+#hidden ARGN lists to append
+macro(add_subdirectory_sources source_dir source_list )
+    #Message ( "Appending directory[${source_dir}] to source list ${ARGN}" )
+    foreach( source ${ARGN} )
+       list (APPEND ${source_list} "${source_dir}/${source}" )
+    endforeach()
+
+    #Message ( "Exit list now - ${${source_list}}" )
+endmacro(add_subdirectory_sources)

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<test-data>
+
+    <insert numItems="10">
+        <TeidIpAddressKey>
+            <teid-start-value>1</teid-start-value>
+            <ip-start-value>1</ip-start-value>
+        </TeidIpAddressKey>
+        
+        <SessionInfoValue>
+            <imsi-start-value>111111111</imsi-start-value>
+            <qci-start-value>1</qci-start-value>
+            <apn-start-value>10</apn-start-value>
+            <time-start-value>1</time-start-value>
+        </SessionInfoValue>
+    </insert>
+    
+    <insert numItems="10">
+        <ImsiKey>
+            <imsi-start-value>111111111</imsi-start-value>
+        </ImsiKey>
+        
+        <SubscriberInfoValue>
+            <imei-start-value>100000000000</imei-start-value>
+            <msisdn-start-value>200000000000</msisdn-start-value>
+            <cgi-start-value>1</cgi-start-value>
+            <time-start-value>1</time-start-value>
+        </SubscriberInfoValue>
+    </insert>
+
+    <find numItems="10">
+        <TeidIpAddressKey>
+            <teid-start-value>1</teid-start-value>
+            <ip-start-value>1</ip-start-value>
+        </TeidIpAddressKey>
+        
+        <EnrichmentInfoValue>
+            <imsi-start-value>111111111</imsi-start-value>
+            <qci-start-value>1</qci-start-value>
+            <apn-start-value>10</apn-start-value>
+            <imei-start-value>100000000000</imei-start-value>
+            <msisdn-start-value>200000000000</msisdn-start-value>
+            <cgi-start-value>1</cgi-start-value>
+            <time-start-value>1</time-start-value>
+        </EnrichmentInfoValue>
+    </find>
+
+</test-data>

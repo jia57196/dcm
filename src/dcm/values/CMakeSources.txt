@@ -1,0 +1,21 @@
+cmake_minimum_required( VERSION 2.8.3 )
+cmake_policy(SET CMP0011 NEW)
+
+project ( DCM_VALUES )
+
+#set the directory for these object
+set( DCM_VALUES_DIR ${DCM_CORE_DIR}/values )
+
+# Include the API directory for grabing the headers correctly
+include_directories ( ${BOOST_INCLUDE_DIR};
+                      ${DCM_VALUES_SOURCE_DIR};
+                      ${DCM_API_DIR};
+                      ${DCM_CORE_DIR}/base;
+                    )
+
+# Source files
+set ( DCM_VALUES_SOURCES 
+        ${DCM_VALUES_DIR}/IDCMValue.cpp;
+        ${DCM_VALUES_DIR}/CDCMMappedValue.cpp;
+    )
+

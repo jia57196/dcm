@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<test-data>
+
+    <insert numItems="100">
+        <TeidIpAddressKey>
+            <teid-start-value>1</teid-start-value>
+            <ip-start-value>1</ip-start-value>
+        </TeidIpAddressKey>
+        
+        <SubscriberInfoValue>
+            <imei-start-value>100000000000</imei-start-value>
+            <msisdn-start-value>200000000000</msisdn-start-value>
+            <cgi-start-value>1</cgi-start-value>
+            <time-start-value>1</time-start-value>
+        </SubscriberInfoValue>
+    </insert>
+
+    <find numItems="100">
+        <TeidIpAddressKey>
+            <teid-start-value>1</teid-start-value>
+            <ip-start-value>1</ip-start-value>
+        </TeidIpAddressKey>
+        
+        <SubscriberInfoValue>
+            <imei-start-value>100000000000</imei-start-value>
+            <msisdn-start-value>200000000000</msisdn-start-value>
+            <cgi-start-value>1</cgi-start-value>
+            <time-start-value>1</time-start-value>
+        </SubscriberInfoValue>
+    </find>
+
+</test-data>

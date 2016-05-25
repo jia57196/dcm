@@ -1,0 +1,20 @@
+cmake_minimum_required( VERSION 2.8.3 )
+
+project ( DCM_CONFIG )
+
+#set the directory for these object
+set( DCM_CONFIG_DIR ${DCM_CORE_DIR}/config )
+
+# Include the API directory for grabing the headers correctly
+include_directories ( ${DCM_CONFIG_SOURCE_DIR};
+                      ${DCM_CORE_DIR}/containers;
+                      ${DCM_API_DIR};
+                      ${XERCES_INCLUDE_DIR};
+                      ${XML_CONFIG_PARSER_INCLUDE_DIR} )
+
+# Source files
+set ( DCM_CONFIG_SOURCES 
+        ${DCM_CONFIG_DIR}/IDCMConfigLoader.cpp;
+        ${DCM_CONFIG_DIR}/CDCMXmlConfigLoader.cpp
+    )
+

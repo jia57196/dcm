@@ -1,0 +1,20 @@
+cmake_minimum_required( VERSION 2.8.3 )
+
+project ( DCM_KEYS )
+
+#set the directory for these object
+set( DCM_KEYS_DIR ${DCM_CORE_DIR}/keys )
+
+# Include the API directory for grabing the headers correctly
+include_directories ( ${BOOST_INCLUDE_DIR};
+                      ${DCM_KEYS_SOURCE_DIR};
+                      ${DCM_API_DIR};
+                      ${DCM_CORE_DIR}/base;
+                    )
+
+# Source files
+set ( DCM_KEYS_SOURCES 
+        ${DCM_KEYS_DIR}/IDCMKey.cpp;
+        ${DCM_KEYS_DIR}/CDCMMappedKey.cpp;
+    )
+
